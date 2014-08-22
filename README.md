@@ -31,6 +31,17 @@ On MacOS you can do like this::
     * xelatex: http://tug.org/mactex/
 4. `$ makeebooks zh` #will produce a mobi
 
+On Windows you can do like this::
+	
+1. INSTALL ruby and gem via rubyinstaller http://rubyinstaller.org/downloads/
+2. INSTALL ruby development kit in the same URL above (to build rdiscount gem).
+2. `$ gem install rdiscount`
+3. INSTALL Calibre for Windows at http://calibre-ebook.com/download
+4. `$ SET ebook_convert_path=c:\Program Files\Calibre2\ebook-convert.exe`. Modify to suite with you Calibre installed path.
+5. Make ebooks:
+    * `$ ruby makeebooks vi` #will produce a mobi
+    * `$ SET FORMAT=epub` then `$ ruby makeebooks vi` #will produce an epub
+
 ## Notes on pandoc
 
 Please use Pandoc version 1.11.1 or later as older versions (confirmed on 1.9.1.1) has a [bug](https://github.com/jgm/pandoc/issues/964) which hides a word after tilde `~`.  You can do `pandoc -v` to see which version you have installed.
